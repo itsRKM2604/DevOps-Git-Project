@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} - App Design</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f4f7fb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #333;
+      }
+
+      .app-card {
+        width: 420px;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .app-header {
+        margin-bottom: 25px;
+      }
+
+      .app-header h1 {
+        font-size: 28px;
+        color: #222;
+      }
+
+      .app-header p {
+        color: #777;
+        margin-top: 6px;
+        font-size: 14px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #dcdfe6;
+        border-radius: 12px;
+        font-size: 15px;
+        transition: 0.3s ease;
+        outline: none;
+      }
+
+      .form-control:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+      }
+
+      textarea.form-control {
+        resize: none;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .save-btn {
+        background: #4f46e5;
+        color: white;
+      }
+
+      .save-btn:hover {
+        background: #4338ca;
+      }
+
+      .show-btn {
+        background: #e5e7eb;
+        color: #333;
+      }
+
+      .show-btn:hover {
+        background: #d1d5db;
+      }
+
+      .footer-text {
+        text-align: center;
+        margin-top: 18px;
+        color: #999;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app-card">
+      <div class="app-header">
+        <h1>{{title}}</h1>
+        <p>Create and manage your items easily.</p>
+      </div>
+
+      <form action="" method="post">
+        <div class="form-group">
+          <label for="iname">Item Name</label>
+          <input
+            type="text"
+            id="iname"
+            name="iname"
+            class="form-control"
+            placeholder="Enter item name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="idesc">Item Description</label>
+          <textarea
+            id="idesc"
+            name="idesc"
+            rows="4"
+            class="form-control"
+            placeholder="Write something about the item..."
+          ></textarea>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="btn save-btn">Save Item</button>
+
+          <button type="button" class="btn show-btn">Show Items</button>
+        </div>
+      </form>
+
+      <div class="footer-text">Simple • Modern • Responsive</div>
+    </div>
+  </body>
+</html>
