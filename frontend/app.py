@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import requests
 
-BACKEND_URL="http://152.26.73.2:9001"
+BACKEND_URL="http://localhost:9001"
 
 app = Flask(__name__)
 
@@ -17,8 +17,7 @@ def submitToDoItem():
     form_data = {
         "iname": iname,
         "idesc": idesc
-    }
-
+    }   
     
     response = requests.post(
         BACKEND_URL + "/submittodoitem",
@@ -32,4 +31,4 @@ def submitToDoItem():
         return redirect("/")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=9000)
